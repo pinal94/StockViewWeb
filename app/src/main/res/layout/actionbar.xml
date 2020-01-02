@@ -1,0 +1,52 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="?attr/actionBarSize">
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+        <ImageView
+            android:id="@+id/ivBack"
+            android:layout_width="@dimen/_45sdp"
+            android:layout_height="match_parent"
+            android:paddingTop="@dimen/_12sdp"
+            android:paddingRight="@dimen/_12sdp"
+            android:visibility="invisible"
+            android:paddingBottom="@dimen/_12sdp"
+            android:src="@drawable/ic_back" />
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:gravity="center"
+            android:orientation="vertical">
+
+            <com.oozee.stockviewweb.Global.Font.CustomFontTextView
+                android:id="@+id/txtActionBarTitle"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:gravity="center"
+                android:text="@string/app_name"
+                android:textAllCaps="true"
+                android:textColor="@color/c_FFFFFF"
+                android:textSize="@dimen/_12sdp"
+                app:CustomFont="@string/Medium" />
+
+        </LinearLayout>
+
+
+        <LinearLayout
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent"
+            android:layout_alignParentRight="true"
+            android:gravity="center">
+
+        </LinearLayout>
+
+    </RelativeLayout>
+
+
+</RelativeLayout>
