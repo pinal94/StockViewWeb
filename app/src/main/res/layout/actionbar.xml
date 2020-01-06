@@ -29,7 +29,7 @@
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:gravity="center"
-                android:text="@string/app_name"
+                android:text="@string/stockView"
                 android:textAllCaps="true"
                 android:textColor="@color/c_FFFFFF"
                 android:textSize="@dimen/_12sdp"

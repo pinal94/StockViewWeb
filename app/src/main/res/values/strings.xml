@@ -1,5 +1,7 @@
 <resources>
-    <string name="app_name">StockViewWeb</string>
+    <string name="app_name">StockView</string>
+
+    <string name="stockView">Stock View</string>
 
     <string name="Bold">Heebo-Bold.ttf</string>
     <string name="ExtraBold">Heebo-ExtraBold.ttf</string>
@@ -8,4 +10,7 @@
     <string name="Medium">Heebo-Medium.ttf</string>
 
     <string name="pleaseInternetConnection">It seems that you are not connected to the Internet. Kindly check your network settings.</string>
+    <string name="titleIntetnetConnection">No Internet connection</string>
+    <string name="enable">Enable</string>
+    <string name="cancel">Cancel</string>
 </resources>

@@ -2,12 +2,16 @@ package com.oozee.stockviewweb.Global
 
 import android.app.Activity
 import android.content.Context
+import android.content.Intent
 import android.graphics.Color
 import android.net.ConnectivityManager
 import android.net.NetworkCapabilities
 import android.os.Build
+import android.provider.Settings
 import android.view.WindowManager
 import android.widget.Toast
+import com.afollestad.materialdialogs.MaterialDialog
+import com.google.android.material.dialog.MaterialDialogs
 import com.oozee.stockviewweb.R
 
 class Utils {
@@ -29,7 +33,7 @@ class Utils {
             }
             return true
         } else {
-            toastView(activity, activity.resources.getString(R.string.pleaseInternetConnection))
+            showNoInterNetDialog(activity)
             if (Build.VERSION.SDK_INT >= Build.VERSION_CODES.LOLLIPOP) {
                 val window = activity.window
                 window.addFlags(WindowManager.LayoutParams.FLAG_DRAWS_SYSTEM_BAR_BACKGROUNDS)
@@ -39,6 +43,22 @@ class Utils {
         }
     }
     //endregion
+
+
+    public fun showNoInterNetDialog(activity: Activity){
+        MaterialDialog(activity).show {
+            title(R.string.titleIntetnetConnection)
+            message(R.string.pleaseInternetConnection)
+            positiveButton(text = "Enable"){
+                val intent = Intent(Settings.ACTION_WIFI_SETTINGS)
+                activity.startActivity(intent)
+                activity.finishAffinity()
+            }
+            negativeButton(text = "Cancel"){
+                activity.finishAffinity()
+            }
+        }
+    }
 
     private fun isNetworkAvailable(activity: Activity): Boolean {
         val connectivityManager = activity.getSystemService(Context.CONNECTIVITY_SERVICE) as ConnectivityManager

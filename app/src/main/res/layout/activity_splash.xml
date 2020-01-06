@@ -7,8 +7,20 @@
     tools:context=".Activity.SplashActivity">
 
     <ImageView
-        android:layout_width="@dimen/_100sdp"
-        android:layout_height="@dimen/_100sdp"
+        android:layout_width="@dimen/_80sdp"
+        android:layout_height="@dimen/_80sdp"
         android:layout_centerInParent="true"
-        android:src="@drawable/ic_launcher_background" />
+        android:adjustViewBounds="true"
+        android:src="@drawable/ic_launcher_background"
+        android:visibility="gone" />
+
+    <com.oozee.stockviewweb.Global.Font.CustomFontTextView
+        android:id="@+id/txtStockView"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_centerInParent="true"
+        android:text="@string/stockView"
+        android:textSize="@dimen/_14sdp"
+        android:textColor="@color/colorPrimary"
+        app:CustomFont="@string/Medium" />
 </RelativeLayout>

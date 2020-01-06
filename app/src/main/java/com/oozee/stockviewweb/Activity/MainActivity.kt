@@ -16,7 +16,7 @@ import kotlinx.android.synthetic.main.activity_main.*
 class MainActivity : AppCompatActivity() {
 
     private var utils: Utils? = null
-    private var strURL = "http://192.168.1.134:2242/"
+    private var strURL = ""
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
@@ -25,9 +25,9 @@ class MainActivity : AppCompatActivity() {
         setActionBar()
 
         if (utils!!.checkInternetConnection(this)) {
-            /*if (!intent.getStringExtra("serviceURL").equals("")) {
+            if (!intent.getStringExtra("serviceURL").equals("")) {
                 strURL = intent.getStringExtra("serviceURL")
-            }*/
+            }
             progressbar.max = 100
             progressbar.progress = 1
             wvMainView.settings.javaScriptEnabled = true
@@ -62,6 +62,6 @@ class MainActivity : AppCompatActivity() {
 
     private fun setActionBar() {
         setSupportActionBar(toolbar)
-        txtActionBarTitle.setText(resources.getString(R.string.app_name))
+        txtActionBarTitle.setText(resources.getString(R.string.stockView))
     }
 }
